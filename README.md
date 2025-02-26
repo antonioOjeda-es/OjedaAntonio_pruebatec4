@@ -333,7 +333,7 @@ He creado tres controladores: HotelService, HabitacionService y VueloService, la
 
 Por otro lado, todos los controladores devolverán una respuesta de tipo **ResponseEntity** la cual será la encargada de enviar la respuesta al usuario final. Los controladores también gestionarán la respuesta que procedente de su respectiva clase de service que serán de tipo **Object** hacia ResponseENtity.
 
-Una Peculiaridad diferente, es que en el controlador VueloService en el método de listarPorParametros este maneja dos endpoins, uno se encargará de devolver la lista de todos los vuelos mediante el método listarVuelos si todos los parámetros de entrada son nulos, y el otro ejecutará filtrarVuelosActivosParametros si alguno de los parámetros que reciben no son nulos.
+Una Peculiaridad diferente, es que en el controlador **VueloController** en el método de **listarPorParametros**, este maneja dos endpoins, uno se encargará de devolver la lista de todos los vuelos mediante el método **listarVuelos** si todos los parámetros de entrada son nulos, y el otro método ejecutará **filtrarVuelosActivosParametros** si alguno de los parámetros que reciben no son nulos.
 
 ## 9. 🔒 **Clase config**
 
