@@ -43,7 +43,7 @@ public class Habitacion {
     @OneToMany(mappedBy = "habitacion", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Usuario> usuarios;
 
-    public <E> Habitacion(long l, String doble, double v, LocalDate now, LocalDate localDate, boolean b, Hotel hotel, List<E> es) {
+    public Habitacion(long l, String doble, double v, LocalDate now, LocalDate localDate, boolean b, Hotel hotel, List<Usuario> es) {
 
     }
 }

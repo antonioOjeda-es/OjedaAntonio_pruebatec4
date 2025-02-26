@@ -216,6 +216,8 @@ public class HabitacionService implements HabitacionServiceInterface {
     @Override
     public Object crearHabitaciones(HabitacionDTO habitacionDTO, Long idHotel) {
 
+        //Hotel hotelEncontrado = habitacionRepository.findByHotelNombre("Don Pablo");
+
         //lanzará una excepción si no encuentra el id del hotel a la hora de insertar en la base de datos
         try {
             //1º creo el hotel y hago set para introducir el id,
@@ -227,20 +229,8 @@ public class HabitacionService implements HabitacionServiceInterface {
             //2º paso a entidad y la guardo en la base de datos
             Habitacion habitacionGuardada = habitacionRepository.save(habitacionDtoToEntity(habitacionDTO));
 
-            //quiero conseguir el nombre del hotel, para eso me lo tengo que traer de la base de datos
-            Optional<Habitacion> habitacionEnviar = habitacionRepository.findAll().stream()
-                    .filter(h -> h.getHotel().getId().equals(idHotel)).findFirst();
-
-            Habitacion habitacionFiltrada = habitacionEnviar.orElse(null);
-
-            //paso HabitacionDTO, le seteo manualmente el valor para que devuelva el nombre del hotel
-            HabitacionDTO habitacionDevolver = this.habitacionEntityToDto(habitacionGuardada);
-           if(habitacionFiltrada != null){
-                //seteo el nombre del hotel que viene de la base de datos
-               habitacionDevolver.setNombreHotel(habitacionGuardada.getHotel().getNombre());
-           }
-
-            return habitacionDevolver;
+            //3º devuelvo la habitación
+            return this.habitacionEntityToDto(habitacionGuardada);
 
         } catch (Exception e) {
             // lanzo este mensaje si el id el error de la base de datos al no encontrar el id para insertar habitación
@@ -302,10 +292,6 @@ public class HabitacionService implements HabitacionServiceInterface {
         habitacionDTO.setDisponibleDesde(habitacion.getDisponibleDesde());
         habitacionDTO.setDisponibleHasta(habitacion.getDisponibleHasta());
         habitacionDTO.setReservado(habitacion.isReservado());
-
-
-        //hago esto para que se renderice el nombre del hotel solamente
-        habitacionDTO.setNombreHotel(habitacion.getHotel().getNombre());
 
         // Convertir Hotel a HotelDTO (si existe)
         if (habitacion.getHotel() != null) {

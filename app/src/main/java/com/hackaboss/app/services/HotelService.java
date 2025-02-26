@@ -337,7 +337,6 @@ public class HotelService implements HotelServiceInterface {
 
         //comprobar si el hotel no es nulo antes de acceder a sus propiedades
         if (habitacion.getHotel() != null) {
-            habitacionDTO.setNombreHotel(habitacion.getHotel().getNombre());
 
             //convertir Hotel a HotelDTO (si existe)
             HotelDTO hotelDTO = new HotelDTO();
@@ -348,7 +347,6 @@ public class HotelService implements HotelServiceInterface {
             hotelDTO.setAlta(habitacion.getHotel().isAlta());
             habitacionDTO.setHotel(hotelDTO);
         } else {
-            habitacionDTO.setNombreHotel("Hotel no asignado");
             habitacionDTO.setHotel(null);
         }
 

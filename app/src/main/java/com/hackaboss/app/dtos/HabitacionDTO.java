@@ -33,7 +33,6 @@ public class HabitacionDTO {
     @JsonProperty("disponibilityDateTo")
     private LocalDate disponibleHasta;
 
-    //@JsonProperty("isBocked")
     private boolean reservado;
 
     //para evitar la recursividad, utilizo el backreference para indicar que es la entidad secundaria
@@ -47,6 +46,4 @@ public class HabitacionDTO {
     @JsonIgnore
     private List<UsuarioDTO> usuarios;
 
-    @JsonProperty("Hotel")
-    private String nombreHotel;
 }
