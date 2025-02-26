@@ -339,9 +339,13 @@ Una Peculiaridad diferente, es que en el controlador VueloService en el método 
 
 > Dentro tengo una clase llamada SecurityConfig, en ella he usado csrf que poder usarse con Postman y no lo bloquee, en producción se debería desactivar.
 >
-> En establezco en este archivo la seguridad de las peticiones de los endpoints de mi proyecto. He dejado todos los métodos **Get** sin seguridad para que puedan ser accedidos por clientes y empleados de la agencia de viajes.
+> Establezco en este archivo la seguridad de las peticiones de los endpoints de mi proyecto.
+>
+> He dejado todos los métodos **Get** sin seguridad para que puedan ser accedidos por clientes y empleados de la agencia de viajes.
 >
 > He dejado también dos endpoints de tipo **Post** sin seguridad para la reserva de habitaciones y de vuelos, estos están hechos para que tanto los clientes como los empleados puedan realizar reservas.
+>
+> El resto de los endpoints están protegidos
 
 ## 10. 📦 **Archivo pom.xml**
 
