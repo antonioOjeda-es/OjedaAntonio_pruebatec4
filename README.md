@@ -314,9 +314,9 @@ Además de los métodos procedentes de los controladores, hay otros métodos que
 
   - Realiza una lógica parecida pero el código del prefijo (letras), las cogerá de la primera letra de origen y de destino
 
-> **🔄 Clases para transformar las clases:**
+> **🔄 Métodos para transformar las entidades:**
 
-> Clases para transformar las clases que van al usuario (DTO) a entidades manejadas y viceversa por el back de nuestro proyecto.
+> Clases para transformar las clases que van al usuario (clases tipo DTO) a entidades manejadas por el pack y viceversa.
 
 - 🔄 HotelDTO a Hotel: hotelDtoToEntity.
 - 🔄 Hotel a HotelDTO: hotelEntityToDTO.
