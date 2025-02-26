@@ -316,7 +316,7 @@ Además de los métodos procedentes de los controladores, hay otros métodos que
 
 > **🔄 Métodos para transformar las entidades:**
 
-> Clases para transformar las clases que van al usuario (clases tipo DTO) a entidades manejadas por el pack y viceversa.
+> Clases para transformar las clases que van al usuario (clases tipo DTO) a entidades manejadas por la parte del backend y viceversa.
 
 - 🔄 HotelDTO a Hotel: hotelDtoToEntity.
 - 🔄 Hotel a HotelDTO: hotelEntityToDTO.
