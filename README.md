@@ -19,13 +19,13 @@ El proyecto es de tipo Maven y consta de la siguiente estructura:
 >
 > │ │ │ ├── controllers/HabitacionesController.java, HotelController.java, VueloController.java
 >
-> │ │ │ ├── dtos/ExceptionDTO.java, HabitacionDTO.java, HotelDTO.java, ReservaHabitacionDTO.java, │ │ │ ReservaVueloDTO.java, UsuarioDTO.java, VueloDTO.java
+> │ │ │ ├── dtos/ExceptionDTO.java, HabitacionDTO.java, HotelDTO.java, ReservaHabitacionDTO.java, ReservaVueloDTO.java, UsuarioDTO.java, VueloDTO.java
 >
 > │ │ │ ├── entities/Habitacion.java, Hotel.java, Usuario.java, Vuelo.java
 >
 > │ │ │ ├── repositories/HabitacionRepository.java, HotelRepository.java, VueloRepository.java
 >
-> │ │ │ └── services/HabitacionService.java, HabitacionServiceInterface.java, HotelService.java, │ │ HotelServiceInterface.java, VueloService.java, VueloServiceInterface.java
+> │ │ │ └── services/HabitacionService.java, HabitacionServiceInterface.java, HotelService.java, HotelServiceInterface.java, VueloService.java, VueloServiceInterface.java
 >
 > │ │ └── resources/application.properties, data.sql
 >
