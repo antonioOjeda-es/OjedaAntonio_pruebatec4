@@ -215,7 +215,7 @@ public class HotelService implements HotelServiceInterface {
 
         //si no existe el prefino
         if (palabraSeparadaSufijo == null) {
-            construirSufijo.append("01");
+            construirSufijo.append("1");
         } else {
             int numeroPrefino = Integer.parseInt(palabraSeparadaSufijo[1]) + 1;
 
@@ -223,7 +223,7 @@ public class HotelService implements HotelServiceInterface {
         }
 
         //envío el prefijo construido con el formato
-        return prefijo + "-00" + construirSufijo;
+        return prefijo + "-000" + construirSufijo;
     }
 
 
