@@ -132,7 +132,7 @@ CREATE TABLE `vuelo` (
 
 LOCK TABLES `vuelo` WRITE;
 /*!40000 ALTER TABLE `vuelo` DISABLE KEYS */;
-INSERT INTO `vuelo` VALUES (1,_binary '','Málaga','2025-03-23','MM-0001','Madrid',150.5,'Economy'),(2,_binary '','Madrid','2025-03-24','MM-002','Málaga',150.5,'Economy'),(3,_binary '','París','2025-02-25','PB-0001','Berlín',160,'Bisness'),(4,_binary '','Toronto','2025-05-24','NT-0001','New York',150.5,'Economy'),(5,_binary '','Londres','2025-06-24','PL-0001','Paris',150.5,'Economy'),(6,_binary '','París','2025-06-24','LP-0001','Londres',150.5,'Economy'),(7,_binary '','Málaga','2025-03-23','MM-002','Madrid',150.5,'Business');
+INSERT INTO `vuelo` VALUES (1,_binary '','Málaga','2025-03-23','MM-0001','Madrid',150.5,'Economy'),(2,_binary '','Madrid','2025-03-24','MM-0002','Málaga',150.5,'Economy'),(3,_binary '','París','2025-02-25','PB-0001','Berlín',160,'Bisness'),(4,_binary '','Toronto','2025-05-24','NT-0001','New York',150.5,'Economy'),(5,_binary '','Londres','2025-06-24','PL-0001','Paris',150.5,'Economy'),(6,_binary '','París','2025-06-24','LP-0001','Londres',150.5,'Economy'),(7,_binary '','Málaga','2025-03-23','MM-0002','Madrid',150.5,'Business');
 /*!40000 ALTER TABLE `vuelo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
