@@ -273,7 +273,7 @@ public class HotelService implements HotelServiceInterface {
         //convierto List<Habitacion> a List<HabitacionDTO> (si existe)
         if (hotel.getHabitaciones() != null) {
             List<HabitacionDTO> habitacionesDto = hotel.getHabitaciones().stream()
-                    // Usar la clase HabitacionService para pasar habitacion
+                    //uso la clase HabitacionService para pasar habitacion
                     .map(this::habitacionEntityToDto)
                     .collect(Collectors.toList());
             hotelDTO.setHabitacionesDto(habitacionesDto);
@@ -379,7 +379,6 @@ public class HotelService implements HotelServiceInterface {
         if (usuarioDTO.getHabitacion() != null) {
             Habitacion habitacion = new Habitacion();
             habitacion.setId(usuarioDTO.getHabitacion().getId());
-            // Aquí puedes mapear otros campos de Habitacion si es necesario
             usuario.setHabitacion(habitacion);
         }
 
@@ -387,7 +386,6 @@ public class HotelService implements HotelServiceInterface {
         if (usuarioDTO.getVuelo() != null) {
             Vuelo vuelo = new Vuelo();
             vuelo.setId(usuarioDTO.getVuelo().getId());
-            // Aquí puedes mapear otros campos de Vuelo si es necesario
             usuario.setVuelo(vuelo);
         }
 

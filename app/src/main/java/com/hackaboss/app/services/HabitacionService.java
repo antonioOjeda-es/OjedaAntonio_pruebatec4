@@ -216,8 +216,6 @@ public class HabitacionService implements HabitacionServiceInterface {
     @Override
     public Object crearHabitaciones(HabitacionDTO habitacionDTO, Long idHotel) {
 
-        //Hotel hotelEncontrado = habitacionRepository.findByHotelNombre("Don Pablo");
-
         //lanzará una excepción si no encuentra el id del hotel a la hora de insertar en la base de datos
         try {
             //1º creo el hotel y hago set para introducir el id,
@@ -225,6 +223,7 @@ public class HabitacionService implements HabitacionServiceInterface {
             HotelDTO hotelEnHabitacion = new HotelDTO();
             hotelEnHabitacion.setId(idHotel);
             habitacionDTO.setHotel(hotelEnHabitacion);
+
 
             //2º paso a entidad y la guardo en la base de datos
             Habitacion habitacionGuardada = habitacionRepository.save(habitacionDtoToEntity(habitacionDTO));
@@ -331,7 +330,6 @@ public class HabitacionService implements HabitacionServiceInterface {
         if (usuarioDTO.getHabitacion() != null) {
             Habitacion habitacion = new Habitacion();
             habitacion.setId(usuarioDTO.getHabitacion().getId());
-            // Aquí puedes mapear otros campos de Habitacion si es necesario
             usuario.setHabitacion(habitacion);
         }
 
@@ -339,7 +337,6 @@ public class HabitacionService implements HabitacionServiceInterface {
         if (usuarioDTO.getVuelo() != null) {
             Vuelo vuelo = new Vuelo();
             vuelo.setId(usuarioDTO.getVuelo().getId());
-            // Aquí puedes mapear otros campos de Vuelo si es necesario
             usuario.setVuelo(vuelo);
         }
 
@@ -363,7 +360,6 @@ public class HabitacionService implements HabitacionServiceInterface {
         if (usuario.getHabitacion() != null) {
             HabitacionDTO habitacionDTO = new HabitacionDTO();
             habitacionDTO.setId(usuario.getHabitacion().getId());
-            // Aquí puedes mapear otros campos de HabitacionDTO si es necesario
             usuarioDTO.setHabitacion(habitacionDTO);
         }
 
@@ -371,7 +367,6 @@ public class HabitacionService implements HabitacionServiceInterface {
         if (usuario.getVuelo() != null) {
             VueloDTO vueloDTO = new VueloDTO();
             vueloDTO.setId(usuario.getVuelo().getId());
-            // Aquí puedes mapear otros campos de VueloDTO si es necesario
             usuarioDTO.setVuelo(vueloDTO);
         }
 

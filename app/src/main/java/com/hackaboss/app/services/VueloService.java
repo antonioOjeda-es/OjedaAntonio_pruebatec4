@@ -367,6 +367,7 @@ public class VueloService implements VueloServiceInterface {
 
     // Convierte VueloDTO a Vuelo (entidad)
     public Vuelo vueloDtoToEntity(VueloDTO vueloDTO) {
+
         if (vueloDTO == null) {
             return null;
         }
@@ -440,7 +441,6 @@ public class VueloService implements VueloServiceInterface {
         if (usuarioDTO.getHabitacion() != null) {
             Habitacion habitacion = new Habitacion();
             habitacion.setId(usuarioDTO.getHabitacion().getId());
-            // Aquí puedes mapear otros campos de Habitacion si es necesario
             usuario.setHabitacion(habitacion);
         }
 
@@ -448,7 +448,6 @@ public class VueloService implements VueloServiceInterface {
         if (usuarioDTO.getVuelo() != null) {
             Vuelo vuelo = new Vuelo();
             vuelo.setId(usuarioDTO.getVuelo().getId());
-            // Aquí puedes mapear otros campos de Vuelo si es necesario
             usuario.setVuelo(vuelo);
         }
 
@@ -470,7 +469,6 @@ public class VueloService implements VueloServiceInterface {
         if (usuario.getHabitacion() != null) {
             HabitacionDTO habitacionDTO = new HabitacionDTO();
             habitacionDTO.setId(usuario.getHabitacion().getId());
-            // Aquí puedes mapear otros campos de HabitacionDTO si es necesario
             usuarioDTO.setHabitacion(habitacionDTO);
         }
 
@@ -478,7 +476,6 @@ public class VueloService implements VueloServiceInterface {
         if (usuario.getVuelo() != null) {
             VueloDTO vueloDTO = new VueloDTO();
             vueloDTO.setId(usuario.getVuelo().getId());
-            // Aquí puedes mapear otros campos de VueloDTO si es necesario
             usuarioDTO.setVuelo(vueloDTO);
         }
 

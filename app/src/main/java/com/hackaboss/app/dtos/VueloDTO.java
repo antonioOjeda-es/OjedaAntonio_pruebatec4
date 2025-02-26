@@ -43,6 +43,5 @@ public class VueloDTO {
 
     @JsonManagedReference(value = "vuelo-usuarios")
     @JsonProperty("passengers")
-    //@JsonIgnore
     private List<UsuarioDTO> usuarios;
 }

@@ -7,5 +7,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface HabitacionRepositoryInterface extends JpaRepository<Habitacion, Long> {
-    Hotel findByHotelNombre(String nombreHote);
 }

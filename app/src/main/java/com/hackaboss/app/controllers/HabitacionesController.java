@@ -24,7 +24,7 @@ public class HabitacionesController {
         return ResponseEntity.ok(respuesta);
     }
 
-    //  /agency/rooms?dateFrom=dd/mm/aaaa&dateTo=dd/mm/aaaa&destination="nombre_destino"
+    // /agency/rooms?dateFrom=dd/mm/aaaa&dateTo=dd/mm/aaaa&destination="nombre_destino"
     //En este caso las variables van a ser opcionales por lo que los parámetros no van ser requeridos obligatoriamente
     @GetMapping("/rooms")
     //uso required false para que haga la búsqueda dependiendo de los datos con los que disponga

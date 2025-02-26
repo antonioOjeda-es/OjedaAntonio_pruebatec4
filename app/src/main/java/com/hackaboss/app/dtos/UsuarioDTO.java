@@ -31,7 +31,6 @@ public class UsuarioDTO {
     @JsonIgnore
     private HabitacionDTO habitacion;
 
-    //@JsonIgnore
     @JsonBackReference(value = "vuelo-usuarios")
     private VueloDTO vuelo;
 }

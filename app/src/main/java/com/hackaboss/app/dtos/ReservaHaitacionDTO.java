@@ -39,7 +39,6 @@ public class ReservaHaitacionDTO {
     @JsonProperty("roomType")
     private String roomType;
 
-    //@JsonManagedReference(value = "habitacion-usuarios")
     @JsonProperty("passengers")
     private List<UsuarioDTO> hosts;
 

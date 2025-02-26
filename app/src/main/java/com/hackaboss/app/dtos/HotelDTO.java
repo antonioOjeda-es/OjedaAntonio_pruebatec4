@@ -38,8 +38,4 @@ public class HotelDTO {
     //@JsonIgnore
     private List<HabitacionDTO> habitacionesDto;
 
-    public HotelDTO(String nombre, String lugar) {
-        this.nombre = nombre;
-        this.lugar = lugar;
-    }
 }
